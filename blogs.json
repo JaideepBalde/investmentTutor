@@ -1,0 +1,30 @@
+[
+  {
+      "id": 1,
+      "title": "How to Start Investing as a Beginner",
+      "author": "John Doe",
+      "date": "2025-01-10",
+      "summary": "Learn the essential steps to begin your investment journey with confidence."
+  },
+  {
+      "id": 2,
+      "title": "Top 5 Technical Indicators for Trading",
+      "author": "Jane Smith",
+      "date": "2025-01-15",
+      "summary": "Discover the most effective technical indicators for making informed trading decisions."
+  },
+  {
+      "id": 3,
+      "title": "Cryptocurrency Trends to Watch in 2025",
+      "author": "Mike Johnson",
+      "date": "2025-01-20",
+      "summary": "Explore the latest trends and insights in the cryptocurrency market for the coming year."
+  },
+  {
+      "id": 4,
+      "title": "Risk Management Strategies for Investors",
+      "author": "Sarah Brown",
+      "date": "2025-01-25",
+      "summary": "Learn how to minimize risks and protect your investments effectively."
+  }
+]

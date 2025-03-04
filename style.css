@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Group Photo Section */
+#group-photo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.group-photo-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.group-photo {
+    width: 300px; /* Adjust the size of the square */
+    height: 300px; /* Keep it square */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.group-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image fill the square while keeping its aspect ratio */
+}
+
+.group-content {
+    margin-top: 20px;
+}
+
+.group-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.group-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.group-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background: #002244;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #003366;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #003366, #004488);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero .btn {
+    background: #ffcc00;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    color: #002244;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.hero .btn:hover {
+    background: #e6b800;
+}
+
+/* Courses Section */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+}
+
+.course-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #002244;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.course-card .btn:hover {
+    background: #004488;
+}
+
+/* Testimonials Section */
+.testimonial-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-avatar img {
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin: 15px 0;
+}
+
+/* Footer */
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Team Section with Parallax Effect */
+#team {
+    background: url('../images/team-bg.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+#team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.team-container {
+    position: relative;
+    z-index: 1;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.team-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.team-member:hover {
+    transform: scale(1.05);
+}
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+.team-member h3 {
+    font-size: 1.5rem;
+}
+.team-member p {
+    font-size: 1rem;
+    color: #ddd;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #00aced;
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.footer-section {
+    max-width: 300px;
+}
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    color: #ccc;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #00aced;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+.footer-bottom a {
+    color: #00aced;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}

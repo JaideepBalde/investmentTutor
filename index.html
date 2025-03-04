@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Financial Markets Tutor - Learn about global markets, Indian markets, cryptocurrency, and more">
+        <meta name="keywords" content="finance, markets, stocks, investing, cryptocurrency, trading">
+        <title>Financial Markets Tutor | Expert Market Analysis</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Adjust path to your favicon image -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+        <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #002147;
+            --secondary-color: #004080;
+            --accent-color: #ffd700;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+            --bg-gray: #e2e2e2;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --warning-color: #ffc107;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--secondary-color);
+            padding: 0.8rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 33, 71, 0.8), rgba(0, 64, 128, 0.8)), url('/api/placeholder/1200/600') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Chart Styles */
+        .chart-container {
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .chart-wrapper {
+            width: 100%;
+            height: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .chart-tabs {
+            display: flex;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--bg-gray);
+        }
+
+        .chart-tab {
+            padding: 0.5rem 1rem;
+            margin-right: 5px;
+            background-color: var(--bg-light);
+            border: none;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chart-tab.active {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+        }
+
+        .chart {
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 1.5rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .chart-tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            pointer-events: none;
+            z-index: 100;
+            display: none;
+        }
+
+        /* Market Stats */
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .stat-change {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .up {
+            background-color: rgba(40, 167, 69, 0.2);
+            color: var(--success-color);
+        }
+
+        .down {
+            background-color: rgba(220, 53, 69, 0.2);
+            color: var(--danger-color);
+        }
+
+        /* News Section */
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .news-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: var(--bg-gray);
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .news-excerpt {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .read-more {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        /* Contact Form */
+        .form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.1);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Learning Section */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .learning-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .learning-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .learning-img {
+            width: 100%;
+            height: 160px;
+            background-color: var(--bg-gray);
+        }
+
+        .learning-content {
+            padding: 1.5rem;
+        }
+
+        .learning-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .learning-desc {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .learning-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin: 3rem 0;
+        }
+
+        .testimonial-container {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        .testimonial {
+            min-width: 100%;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--bg-gray);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .testimonial-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--bg-gray);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--secondary-color);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f7f7f7;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.show {
+            max-height: 300px;
+            padding: 1rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            color: var(--text-light);
+            border-bottom: none;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .newsletter-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0 1.5rem;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            margin-bottom: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background-color: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.2);
+            color: var(--success-color);
+        }
+
+        .alert-danger {
+            background-color: rgba(220, 53, 69, 0.1);
+            border: 1px solid rgba(220, 53, 69, 0.2);
+            color: var(--danger-color);
+        }
+
+        /* Loader */
+        .loader {
+            width: 36px;
+            height: 36px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--secondary-color);
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .chart-wrapper {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .footer-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 4px;
+                margin-bottom: 1rem;
+            }
+            
+            .newsletter-btn {
+                border-radius: 4px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .market-stats, 
+            .news-container, 
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-img">FMT</div>
+                <span class="logo-text">Financial Markets Tutor</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </header>
+
+   <!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#global-markets">Global Markets</a></li>
+            <li><a href="#indian-markets">Indian Markets</a></li>
+            <li><a href="#cryptocurrency-markets">Cryptocurrency</a></li>
+            <li><a href="#learning">Learning Center</a></li>
+            <li><a href="#news">Market News</a></li>
+            <li><a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Academy</title>
+    <script defer src="main.js"></script>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333;">
+
+    <!-- Header Section -->
+    <header style="background: #002147; padding: 15px 0; text-align: center;">
+        <nav>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 20px;">
+                <li><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Home</a></li>
+
+                <li><a href="blogs.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Blogs</a></li>
+                <li><a href="about.html" style="color: white; text-decoration: none; font-size: 1.2rem;">About</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #002147, #0056b3); color: white;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Transform Your Financial Future</h1>
+        <p style="font-size: 1.3rem; margin-bottom: 20px;">Join our investment academy and master the art of trading.</p>
+        <a href="courses.html" class="btn" style="background: #ff6600; color: white; padding: 12px 24px; font-size: 1.2rem; text-decoration: none; border-radius: 6px; transition: 0.3s;">
+            Explore Courses
+        </a>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" style="padding: 50px 20px; text-align: center;">
+        <div class="container" style="max-width: 1100px; margin: auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Explore Our Investment Courses</h2>
+            <div id="courses-list" class="courses-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div style="background: white; padding: 20px; border-radius: 8px; width: 300px; text-align: left;">
+                    <h3>Stock Market Fundamentals</h3>
+                    <p>Learn the basics of stock trading, market trends, and investment strategies.</p>
+                    <a href="courses.html" style="color: #0056b3; text-decoration: none; font-weight: bold;">Learn More →</a>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 8px; width: 300px; text-align: left;">
+                    <h3>Technical Analysis</h3>
+                    <p>Master chart patterns, indicators, and price movements to make informed decisions.</p>
+                    <a href="courses.html" style="color: #0056b3; text-decoration: none; font-weight: bold;">Learn More →</a>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 8px; width: 300px; text-align: left;">
+                    <h3>Options Trading</h3>
+                    <p>Advanced strategies for options trading and risk management.</p>
+                    <a href="courses.html" style="color: #0056b3; text-decoration: none; font-weight: bold;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" style="padding: 50px 20px; text-align: center; background: #e3e3e3;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Latest Blog Posts</h2>
+        <div id="blog-list" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div style="background: white; padding: 20px; border-radius: 8px; width: 300px; text-align: left;">
+                <h3>How to Invest in 2025</h3>
+                <p>Discover top strategies for maximizing your investments this year.</p>
+                <a href="blogs.html" style="color: #0056b3; text-decoration: none; font-weight: bold;">Read More →</a>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 8px; width: 300px; text-align: left;">
+                <h3>Cryptocurrency vs. Stocks</h3>
+                <p>Which is a better investment in the current market?</p>
+                <a href="blogs.html" style="color: #0056b3; text-decoration: none; font-weight: bold;">Read More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background: #002147; padding: 20px; text-align: center; color: white;">
+        <p style="margin: 0;">&copy; 2025 Investment Academy. All Rights Reserved.</p>
+        <div>
+            <a href="privacy.html" style="color: white; text-decoration: none; margin-right: 15px;">Privacy Policy</a> |
+            <a href="terms.html" style="color: white; text-decoration: none; margin-left: 15px;">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Master Financial Markets with Expert Guidance</h1>
+            <p>Stay updated with real-time market data, expert analysis, and educational resources to make informed investment decisions.</p>
+            <a href="#learning" class="cta-btn">Start Learning</a>
+        </div>
+        
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Market Summary -->
+            <section class="section" id="market-summary">
+                <h2>Market Summary</h2>
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <h3>S&P 500</h3>
+                        <div class="stat-value">4,587.64</div>
+                        <div class="stat-change up">+1.23%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Dow Jones</h3>
+                        <div class="stat-value">35,208.51</div>
+                        <div class="stat-change up">+0.87%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>NASDAQ</h3>
+                        <div class="stat-value">14,619.64</div>
+                        <div class="stat-change down">-0.43%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>NIFTY 50</h3>
+                        <div class="stat-value">17,853.20</div>
+                        <div class="stat-change up">+0.92%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Bitcoin</h3>
+                        <div class="stat-value">$41,365.78</div>
+                        <div class="stat-change up">+2.17%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Gold</h3>
+                        <div class="stat-value">$1,824.60</div>
+                        <div class="stat-change up">+0.34%</div>
+                    </div>
+                </div>
+            </section>
+
+<!-- Indian Markets -->
+<section class="section" id="indian-markets" style="margin-top: 60px;">
+    <h2 style="font-family: Arial, sans-serif; color: #333; font-size: 36px; text-align: center;">Indian Markets</h2>
+    <div class="chart-container" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background-color: #f9f9f9;">
+        <!-- Image for Indian Market -->
+        <div class="chart-wrapper" style="position: relative; width: 80%; height: 400px; border-radius: 10px; background-image: url('indiainvest.jpg'); background-size: cover; background-position: center; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease-in-out;">
+            <div class="chart-tooltip" id="indianChartTooltip" style="position: absolute; bottom: 10px; left: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px;"></div>
+        </div>
+    </div>
+    <div class="row" style="display: flex; justify-content: center; margin-top: 30px;">
+        <div class="col" style="max-width: 800px; text-align: left; font-family: Arial, sans-serif; opacity: 0; animation: fadeIn 1s forwards;">
+            <h3 style="color: #333; font-size: 24px;">What are Indian Markets?</h3>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The Indian stock market refers to the platforms where securities such as shares, bonds, and derivatives are bought and sold within the Indian economy. The two major stock exchanges in India are the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE), with the NSE being the largest in terms of trading volume. These exchanges play a crucial role in determining the economic health of the country.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why are Indian Markets important?</strong> The Indian stock market is a vital component of India's economic infrastructure, facilitating capital formation and providing an avenue for companies to raise funds for expansion. As the economy grows, the stock market becomes an essential part of investment strategy for both domestic and international investors. It allows companies to get listed and access capital, while also offering opportunities for investors to profit from price fluctuations.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The Indian market offers various investment instruments including equities, mutual funds, bonds, and Exchange Traded Funds (ETFs). Investors and traders flock to Indian markets due to the country's burgeoning middle class, robust economic growth, and the increasing integration of India with global markets.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The market has witnessed remarkable growth in recent years, driven by factors such as technological advancements, regulatory reforms, and growing investor awareness. India’s markets have become an attractive destination for foreign investors, with the country’s economic performance and corporate earnings showing resilience amidst global uncertainties.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>What makes Indian Markets unique?</strong> The Indian stock market is unique because it is home to several high-growth sectors like technology, pharmaceuticals, infrastructure, and finance. These sectors attract a diverse range of investors, from individual retail investors to large institutional investors. In addition, India’s vibrant start-up ecosystem has spurred the rise of new-age companies that are now listed on the stock exchanges, providing unique investment opportunities.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The Indian markets are also known for their <strong>high volatility</strong>, which presents both opportunities and risks for investors. Market fluctuations are often driven by factors such as domestic economic policies, political events, corporate earnings reports, and global market trends.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why is this relevant for investors?</strong> For investors, understanding the dynamics of the Indian stock market is crucial in making informed investment decisions. It is essential to stay updated on the key market indices such as the Nifty 50 and BSE Sensex, as well as major policy announcements from the Reserve Bank of India (RBI) and the government that can have a significant impact on market movements.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Animation styles -->
+<style>
+
+    
+
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.cta-btn:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .chart-wrapper:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+
+<section class="section" id="news" style="margin-top: 60px; padding: 60px 0; background-color: #f9f9f9;">
+    <h2 style="font-family: 'Roboto', sans-serif; color: #333; font-size: 36px; text-align: center; margin-bottom: 40px; font-weight: 600;">Market News</h2>
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            
+            <!-- News Article 1 -->
+            <div class="col" style="flex: 1 1 48%; min-width: 300px;">
+                <div class="card" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                    <img src="globalmarket.jpeg" alt="Market News Image 1" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body" style="padding: 20px;">
+                        <h3 style="color: #333; font-size: 24px; font-weight: 500; margin-bottom: 15px;">Global Stock Markets Surge Amid Positive Economic Outlook</h3>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                            Global stock markets experienced a strong rally last week as positive earnings reports and economic forecasts boost investor confidence. In this article, we explore the factors driving the markets and what investors should expect in the near future.
+                        </p>
+                        <a href="#!" style="color: #007BFF; text-decoration: none; font-size: 16px;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Article 2 -->
+            <div class="col" style="flex: 1 1 48%; min-width: 300px;">
+                <div class="card" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                    <img src="news2.webp" alt="Market News Image 2" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body" style="padding: 20px;">
+                        <h3 style="color: #333; font-size: 24px; font-weight: 500; margin-bottom: 15px;">Cryptocurrency Markets Continue to Break New Records</h3>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                            Cryptocurrencies are on a record-breaking streak, with Bitcoin and Ethereum seeing substantial growth. This article takes a closer look at the factors contributing to this rally, and how crypto markets might evolve in the coming months.
+                        </p>
+                        <a href="#!" style="color: #007BFF; text-decoration: none; font-size: 16px;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Article 3 -->
+            <div class="col" style="flex: 1 1 48%; min-width: 300px;">
+                <div class="card" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                    <img src="indian market record.jpg" alt="Market News Image 3" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body" style="padding: 20px;">
+                        <h3 style="color: #333; font-size: 24px; font-weight: 500; margin-bottom: 15px;">Indian Markets Reach Record Highs Despite Global Economic Uncertainty</h3>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                            The Indian stock market has reached new peaks despite global challenges. We explore the factors driving this growth and the future outlook for Indian investors.
+                        </p>
+                        <a href="#!" style="color: #007BFF; text-decoration: none; font-size: 16px;"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Featured Insights -->
+        <div class="featured-news" style="margin-top: 60px;">
+            <h2 style="font-family: 'Roboto', sans-serif; color: #333; font-size: 32px; text-align: center; margin-bottom: 30px; font-weight: 600;">Featured Market Insights</h2>
+            <div class="row" style="display: flex; gap: 30px; justify-content: center;">
+                
+                <!-- Featured Card 1 -->
+                <div class="col" style="flex: 1 1 48%; min-width: 300px;">
+                    <div class="card" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                        <img src="crash.png" alt="Featured Image 1" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="card-body" style="padding: 20px;">
+                            <h3 style="color: #333; font-size: 24px; font-weight: 500; margin-bottom: 15px;">Understanding the Stock Market Crash of 2025</h3>
+                            <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                                The stock market crash of 2025 has raised many concerns. This article provides an in-depth analysis of the causes, effects, and what investors should expect in the recovery phase.
+                            </p>
+                            <a href="#!" style="color: #007BFF; text-decoration: none; font-size: 16px;"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Card 2 -->
+                <div class="col" style="flex: 1 1 48%; min-width: 300px;">
+                    <div class="card" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                        <img src="new-federal-reserve-rates.webp" alt="Featured Image 2" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="card-body" style="padding: 20px;">
+                            <h3 style="color: #333; font-size: 24px; font-weight: 500; margin-bottom: 15px;">Federal Reserve's Impact on Global Markets: What You Need to Know</h3>
+                            <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                                The Federal Reserve's recent interest rate hike has caused ripples in global markets. This article discusses the wider implications and what investors should consider moving forward.
+                            </p>
+                            <a href="#!" style="color: #007BFF; text-decoration: none; font-size: 16px;"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cryptocurrency Market -->
+<section class="section" id="cryptocurrency-markets" style="margin-top: 60px;">
+    <h2 style="font-family: Arial, sans-serif; color: #333; font-size: 36px; text-align: center;">Cryptocurrency Markets</h2>
+    <div class="chart-container" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background-color: #f9f9f9;">
+        <!-- Image for Cryptocurrency Market -->
+        <div class="chart-wrapper" style="position: relative; width: 80%; height: 400px; border-radius: 10px; background-image: url('crypto.jpg'); background-size: cover; background-position: center; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease-in-out;">
+            <div class="chart-tooltip" id="cryptoChartTooltip" style="position: absolute; bottom: 10px; left: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px;"></div>
+        </div>
+    </div>
+    <div class="row" style="display: flex; justify-content: center; margin-top: 30px;">
+        <div class="col" style="max-width: 800px; text-align: left; font-family: Arial, sans-serif; opacity: 0; animation: fadeIn 1s forwards;">
+            <h3 style="color: #333; font-size: 24px;">What are Cryptocurrency Markets?</h3>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The cryptocurrency market is a decentralized global financial marketplace where digital currencies such as Bitcoin, Ethereum, and many others are traded. Unlike traditional financial markets, which are regulated by government authorities, cryptocurrency markets operate on blockchain technology, ensuring transparency and security in transactions.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why is it important?</strong> Cryptocurrencies have revolutionized the way we think about money, offering faster and more secure transactions, lower fees, and enabling people in underbanked regions to access financial services. These markets have become a hub for both retail and institutional investors seeking high returns, although they also carry significant risk due to their volatility.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                Cryptocurrency markets function through decentralized exchanges (DEXs) and centralized exchanges (CEXs). These platforms allow users to buy, sell, and trade digital currencies in real-time. The market also facilitates peer-to-peer transactions and decentralized finance (DeFi), where financial services such as lending and borrowing are provided without intermediaries.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why is this relevant for investors?</strong> As digital assets continue to gain popularity, understanding cryptocurrency markets is essential for anyone involved in investing or trading. The market offers unique opportunities for profit, but also comes with high risks due to its price volatility, regulatory uncertainties, and technological challenges.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                This market also introduces the concept of <strong>tokenization</strong>, where real-world assets such as real estate, art, and even stocks are represented as digital tokens. As the world moves toward digital economies, cryptocurrencies will continue to play a significant role in shaping the future of global finance.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Animation styles -->
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .chart-wrapper:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<!-- Global Markets -->
+<section class="section" id="global-markets" style="margin-top: 60px;">
+    <h2 style="font-family: Arial, sans-serif; color: #333; font-size: 36px; text-align: center;">Global Markets</h2>
+    <div class="chart-container" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background-color: #f9f9f9;">
+        <!-- Image for Global Market -->
+        <div class="chart-wrapper" style="position: relative; width: 80%; height: 400px; border-radius: 10px; background-image: url('globalmarket.jpeg'); background-size: cover; background-position: center; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease-in-out;">
+            <div class="chart-tooltip" id="globalChartTooltip" style="position: absolute; bottom: 10px; left: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px;"></div>
+        </div>
+    </div>
+    <div class="row" style="display: flex; justify-content: center; margin-top: 30px;">
+        <div class="col" style="max-width: 800px; text-align: left; font-family: Arial, sans-serif; opacity: 0; animation: fadeIn 1s forwards;">
+            <h3 style="color: #333; font-size: 24px;">What are Global Markets?</h3>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                Global markets refer to the worldwide financial markets where buyers and sellers engage in the trading of assets such as stocks, bonds, commodities, currencies, and other financial instruments. These markets are interconnected and influence each other across borders. Major global financial hubs include New York, London, Hong Kong, Tokyo, and Frankfurt, where the majority of global trading occurs.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why are Global Markets important?</strong> Global markets play a crucial role in the economic development of countries, offering opportunities for businesses to raise capital, for investors to diversify their portfolios, and for economies to expand. They reflect the economic health of countries, with market fluctuations influenced by domestic and global events such as political changes, trade policies, and technological advancements.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Key Players in Global Markets:</strong> The major players in global markets include governments, central banks, multinational corporations, institutional investors (e.g., pension funds, hedge funds), and individual retail investors. These entities have a profound influence on the movement of stock prices, currency values, and commodity prices around the world.
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>What drives Global Market movements?</strong> Several factors contribute to the dynamics of global markets:
+                <ul style="font-size: 16px; color: #666; line-height: 1.6;">
+                    <li><strong>Economic Indicators:</strong> Data such as GDP growth, unemployment rates, and inflation can heavily influence market trends.</li>
+                    <li><strong>Geopolitical Events:</strong> Political instability, elections, and international relations can cause shifts in market sentiment.</li>
+                    <li><strong>Market Sentiment:</strong> Investor confidence, market speculation, and the overall mood of the global economic environment affect the market’s direction.</li>
+                    <li><strong>Monetary Policies:</strong> Central banks' actions, like interest rate changes and stimulus packages, have a direct impact on the global financial system.</li>
+                    <li><strong>Technological Advancements:</strong> Innovations in sectors like AI, biotechnology, and renewable energy can create new opportunities and disrupt existing markets.</li>
+                </ul>
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                The global financial markets are highly interconnected, meaning that events in one part of the world can impact other regions. For example, a slowdown in the U.S. economy can affect European markets, while geopolitical tensions in Asia can influence commodity prices globally. 
+            </p>
+            <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <strong>Why is this relevant for investors?</strong> Global markets offer investors numerous opportunities for growth, diversification, and risk management. By investing in international markets, investors can access high-growth economies, benefit from different economic cycles, and mitigate risks associated with local market downturns. However, with global opportunities come global risks, such as currency fluctuations, political instability, and regulatory challenges.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Animation styles -->
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .chart-wrapper:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<!-- Inline JavaScript to handle active tab switching -->
+<script>
+    const tabs = document.querySelectorAll('.chart-tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+
+    const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Add class to trigger animation
+            observer.unobserve(entry.target); // Stop observing after it's visible
+        }
+    });
+}, {
+    threshold: 0.5 // Trigger when 50% of the section is visible
+});
+
+sections.forEach(section => {
+    observer.observe(section); // Start observing each section
+});
+
+</script>
+
+
+               <!-- Learning Center -->
+<section class="section" id="learning">
+    <h2>Learning Center</h2>
+    <div class="learning-grid">
+        <div class="learning-card" onclick="showCourse('stockMarkets')">
+            <div class="learning-img" style="background-image: url('stockmarket.jpg');"></div>
+            <div class="learning-content">
+                <h3 class="learning-title">Understanding Stock Markets</h3>
+                <p class="learning-desc">A comprehensive guide to stock markets, how they operate, and strategies for investing.</p>
+                <div class="learning-meta">
+                    <span>Duration: 3 hours</span>
+                    <span>Level: Beginner</span>
+                </div>
+            </div>
+        </div>
+        <div class="learning-card" onclick="showCourse('cryptoBasics')">
+            <div class="learning-img" style="background-image: url('Crypto-basics--1-.png');"></div>
+            <div class="learning-content">
+                <h3 class="learning-title">Cryptocurrency Basics</h3>
+                <p class="learning-desc">Learn the fundamentals of cryptocurrency, blockchain technology, and how to trade.</p>
+                <div class="learning-meta">
+                    <span>Duration: 2 hours</span>
+                    <span>Level: Beginner</span>
+                </div>
+            </div>
+        </div>
+        <div class="learning-card" onclick="showCourse('advancedTrading')">
+            <div class="learning-img" style="background-image: url('advancetrading.jpg');"></div>
+            <div class="learning-content">
+                <h3 class="learning-title">Advanced Trading Strategies</h3>
+                <p class="learning-desc">Explore advanced trading strategies and risk management techniques for experienced traders.</p>
+                <div class="learning-meta">
+                    <span>Duration: 4 hours</span>
+                    <span>Level: Advanced</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Course Details -->
+    <div id="courseDetails" class="course-details" style="display: none;">
+        <button onclick="closeCourse()">&#10006; Close</button>
+        <h3 id="courseTitle"></h3>
+        <p id="courseContent"></p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <div class="container">
+        <h2>Contact Information</h2>
+        <p>If you'd like to get in touch with me, feel free to reach out through the following platforms. I'm happy to discuss collaborations, projects, or just chat about tech!</p>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:jaydeepbalade15@gmail.com" class="contact-link">jaydeepbalade15@gmail.com</a></p>
+                <p class="contact-description">Reach out via email for any inquiries or questions.</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/jaideep-balde-220a43204/" target="_blank" class="contact-link">Visit my LinkedIn Profile</a></p>
+                <p class="contact-description">Connect with me on LinkedIn for professional networking and collaborations.</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/JaideepBalde" target="_blank" class="contact-link">Visit my GitHub Profile</a></p>
+                <p class="contact-description">Explore my projects and repositories for coding examples and contributions.</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>Mumbai, Maharashtra, India 421302</p>
+                <p class="contact-description">Feel free to drop by or send any physical correspondence.</p>
+            </div>
+        </div>
+
+        <!-- Social Media Icons (Optional) -->
+        <!-- Social Icons Section -->
+<div class="social-icons">
+    <a href="https://x.com/Jaideep16369301" target="_blank" class="social-icon">
+        <i class="fab fa-twitter"></i> <!-- FontAwesome Twitter Icon -->
+    </a>
+</div>
+
+<!-- FontAwesome CDN for Twitter Icon -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Compact CSS for Social Icon -->
+<style>
+    .social-icons {
+        display: inline-block;
+    }
+
+    .social-icon {
+        font-size: 24px; /* Adjust size */
+        color: #1DA1F2; /* Twitter's signature blue */
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: #0077cc; /* Darker blue on hover */
+        transform: scale(1.1); /* Slight scale on hover */
+    }
+</style>
+
+    </div>
+</section>
+
+<!-- CSS for Contact Section (Enhanced) -->
+<style>
+    #contact {
+        padding: 60px 0;
+        background-color: #f4f4f9;
+    }
+
+    #contact .container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #contact h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    #contact p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .contact-item {
+        background-color: #fff;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .contact-item:hover {
+        transform: scale(1.05);
+    }
+
+    .contact-item h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .contact-item p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    .contact-item a.contact-link {
+        color: #0073e6;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .contact-item a.contact-link:hover {
+        color: #005bb5;
+        text-decoration: underline;
+    }
+
+    .contact-description {
+        font-style: italic;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    .social-icons {
+        margin-top: 40px;
+    }
+
+    .social-icon {
+        margin: 0 15px;
+        display: inline-block;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icon:hover img {
+        transform: scale(1.2);
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+        .contact-info {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
+
+
+<style>
+    .learning-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .learning-card {
+        width: 300px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .learning-card:hover {
+        transform: scale(1.05);
+    }
+    .learning-img {
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+    }
+    .learning-content {
+        padding: 15px;
+    }
+    .learning-title {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    .learning-meta {
+        font-size: 0.9rem;
+        color: #555;
+    }
+    .course-details {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .course-details button {
+        background: #d9534f;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        float: right;
+    }
+</style>
+<script>
+    function showCourse(course) {
+        const details = {
+            stockMarkets: {
+                title: "Understanding Stock Markets: A Comprehensive Overview",
+                content: `
+                    <p>This course provides an in-depth understanding of stock markets, a crucial element of global financial systems. 
+                    You will learn the fundamentals of how stock markets operate, including the roles of various market participants, 
+                    the function of stock exchanges (such as NYSE, NASDAQ, and NSE), and how securities are bought and sold. 
+                    The course covers:</p>
+                    <ul>
+                        <li>The concept of equity and stock ownership</li>
+                        <li>The structure of stock exchanges and trading floors</li>
+                        <li>Types of orders (market, limit, and stop orders)</li>
+                        <li>The role of market makers and brokers</li>
+                        <li>Investment strategies such as value investing, growth investing, and dividend investing</li>
+                    </ul>
+                    <p>You’ll gain practical knowledge about stock market operations and strategies used by both institutional and retail investors. 
+                    Whether you're a beginner looking to enter the market or someone aiming to sharpen your skills, this course will provide the 
+                    knowledge needed to navigate stock markets with confidence.</p>
+                `
+            },
+            cryptoBasics: {
+                title: "Cryptocurrency Basics: Understanding Digital Assets",
+                content: `
+                    <p>This introductory course offers a complete guide to the world of cryptocurrencies. It covers the fundamental aspects 
+                    of blockchain technology and digital currencies, and explains how they’re revolutionizing traditional finance. Key topics include:</p>
+                    <ul>
+                        <li>How blockchain technology powers decentralized digital currencies like Bitcoin, Ethereum, and more</li>
+                        <li>The significance of public and private keys in securing transactions</li>
+                        <li>The concept of crypto wallets (software and hardware) and how to safely store your assets</li>
+                        <li>How to buy, sell, and trade cryptocurrencies across various exchanges</li>
+                        <li>The risks and benefits of investing in cryptocurrencies</li>
+                        <li>Key concepts in crypto mining, staking, and yield farming</li>
+                    </ul>
+                    <p>By the end of the course, you will understand how cryptocurrencies work, their potential as an investment asset, and 
+                    how blockchain is transforming financial transactions and beyond. You’ll also learn about the broader cryptocurrency ecosystem, 
+                    including smart contracts and decentralized finance (DeFi).</p>
+                `
+            },
+            advancedTrading: {
+                title: "Advanced Trading Strategies: Mastering Financial Markets",
+                content: `
+                    <p>This course is tailored for those looking to take their trading skills to the next level. You will explore advanced 
+                    techniques used by professional traders to make data-driven decisions and enhance profitability. Topics covered include:</p>
+                    <ul>
+                        <li>Technical analysis fundamentals: chart patterns, candlestick analysis, and indicators like RSI, MACD, and Bollinger Bands</li>
+                        <li>Risk management strategies: stop-loss orders, position sizing, and portfolio diversification</li>
+                        <li>Algorithmic trading: how to build automated trading bots using programming languages like Python</li>
+                        <li>Trading psychology: managing emotions, avoiding overtrading, and maintaining discipline</li>
+                        <li>Quantitative analysis: using statistical models to predict market movements</li>
+                        <li>Leveraged trading and margin trading: understanding the benefits and risks</li>
+                    </ul>
+                    <p>The course includes case studies of real-world market scenarios and the analysis of successful and failed trades. You will also 
+                    gain access to advanced tools for backtesting strategies, evaluating performance, and refining your approach to market trends. 
+                    By the end of this course, you'll be prepared to execute high-level trading strategies across multiple asset classes, including 
+                    stocks, options, forex, and cryptocurrencies.</p>
+                `
+            }
+        };
+
+        
+
+        // Apply fade-in animation for the course content
+        const courseDetails = document.getElementById('courseDetails');
+        courseDetails.style.display = 'block';
+        courseDetails.style.opacity = 0;
+        setTimeout(() => {
+            courseDetails.style.transition = 'opacity 1s';
+            courseDetails.style.opacity = 1;
+        }, 10);
+
+        // Set the course title and content
+        document.getElementById('courseTitle').innerText = details[course].title;
+        document.getElementById('courseContent').innerHTML = details[course].content;
+    }
+
+    function closeCourse() {
+        const courseDetails = document.getElementById('courseDetails');
+        courseDetails.style.transition = 'opacity 1s';
+        courseDetails.style.opacity = 0;
+        setTimeout(() => {
+            courseDetails.style.display = 'none';
+        }, 1000);
+    }
+</script>
+

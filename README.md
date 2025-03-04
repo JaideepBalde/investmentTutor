@@ -1,1 +1,1 @@
-# investmentTutor
+# InvestmentTutoring

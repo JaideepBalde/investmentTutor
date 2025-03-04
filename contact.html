@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center;">
+
+    <!-- Header -->
+    <header style="background: rgba(0, 0, 0, 0.5); padding: 20px; text-align: center;">
+        <h1 style="margin: 0; font-size: 2.5rem;">Contact Us</h1>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+        <div class="container" style="background: rgba(255, 255, 255, 0.15); padding: 30px; border-radius: 12px; backdrop-filter: blur(10px); width: 90%; max-width: 400px; text-align: left;">
+
+            <h2 style="text-align: center; font-size: 2rem;">Get in Touch</h2>
+
+            <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <label for="name" style="font-weight: bold;">Name:</label>
+                <input type="text" id="name" name="name" required style="padding: 10px; border-radius: 6px; border: none; font-size: 1rem;">
+
+                <label for="email" style="font-weight: bold;">Email:</label>
+                <input type="email" id="email" name="email" required style="padding: 10px; border-radius: 6px; border: none; font-size: 1rem;">
+
+                <label for="message" style="font-weight: bold;">Message:</label>
+                <textarea id="message" name="message" rows="5" required style="padding: 10px; border-radius: 6px; border: none; font-size: 1rem;"></textarea>
+
+                <button type="submit" style="background: #ff6600; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 1.2rem; cursor: pointer; transition: 0.3s;">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: rgba(0, 0, 0, 0.5); padding: 15px; text-align: center; position: absolute; bottom: 0; width: 100%;">
+        <p style="margin: 0; font-size: 1rem;">&copy; 2025 Finance Academy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

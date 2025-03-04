@@ -1,0 +1,30 @@
+[
+  {
+      "id": 1,
+      "title": "Stock Market Basics",
+      "description": "Learn the fundamentals of stock markets, trading, and investing.",
+      "duration": "4 Weeks",
+      "price": "$99"
+  },
+  {
+      "id": 2,
+      "title": "Technical Analysis Mastery",
+      "description": "Deep dive into chart patterns, indicators, and market trends.",
+      "duration": "6 Weeks",
+      "price": "$149"
+  },
+  {
+      "id": 3,
+      "title": "Options Trading Strategies",
+      "description": "Master options trading with risk management techniques.",
+      "duration": "5 Weeks",
+      "price": "$129"
+  },
+  {
+      "id": 4,
+      "title": "Cryptocurrency Investment",
+      "description": "Understand blockchain, crypto markets, and investment strategies.",
+      "duration": "3 Weeks",
+      "price": "$79"
+  }
+]
